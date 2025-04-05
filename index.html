@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="bg-gradient-to-br from-[#1F3757] to-[#131537] min-h-screen"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scessors</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="shortcut icon" href="img/five-icon.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- modal  -->
+
+    <div class="flex justify-end p-10">
+      <div class="flex gap-2 flex-col">
+        <button class="btn bg-[#1f9c4d]" id="rules">RULES</button>
+        <button class="btn bg-[red] text-[#fff]" id="ModeChanger">
+          Advanced
+        </button>
+      </div>
+      <dialog id="rulesModal" class="modal">
+        <div class="modal-box bg-slate-800]">
+          <form method="dialog">
+            <button
+              class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            >
+              ✕
+            </button>
+          </form>
+          <h3 class="font-bold text-lg text-[#fff]">RULES</h3>
+          <img
+            id="rulesImage"
+            class="py-4 flex items-center justify-center m-auto"
+            src="img/rule-basic.svg"
+            alt="Rule"
+          />
+        </div>
+      </dialog>
+    </div>
+
+    <!-- Section one  -->
+    <section id="gameZone">
+      <div
+        id="gameZoneInner"
+        class="max-w-[476px] w-full mx-auto bg-no-repeat bg-center mt-[-40px]"
+        data-mode="simple"
+      >
+        <ul class="grid">
+          <li>
+            <button class="js-hand">
+              <img src="img/paper.svg" alt="paper" />
+            </button>
+          </li>
+          <li>
+            <button class="js-hand">
+              <img src="img/rock.svg" alt="rock" />
+            </button>
+          </li>
+          <li class="">
+            <button class="js-hand">
+              <img src="img/scissors.svg" alt="scissors" />
+            </button>
+          </li>
+          <li class="">
+            <button class="js-hand">
+              <img src="img/dino.svg" alt="dino" />
+            </button>
+          </li>
+          <li class="">
+            <button class="js-hand">
+              <img src="img/kaltakesak.svg" alt="kaltakesak" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section two  -->
+    <section class="hidden" id="secondGameZone">
+      <div class="flex items-center justify-center gap-10">
+        <img src="img/paper.svg" id="user" width="198" height="203" alt="" />
+        <div class="flex flex-col items-center gap-4">
+          <strong id="status"></strong>
+          <button id="refresh" class="btn btn-outline btn-success">
+            Play Again
+          </button>
+        </div>
+        <img
+          src="img/hand-load.svg"
+          width="198"
+          height="203"
+          id="robot"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>

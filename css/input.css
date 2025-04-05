@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  div[data-mode="simple"] {
+    background-image: url(../img/triangle.svg);
+  }
+
+  div[data-mode="advanced"] {
+    background-image: url(../img/Polygon.svg);
+  }
+
+  div[data-mode="simple"] img {
+    @apply w-[198px] h-[203px];
+  }
+
+  div[data-mode="advanced"] img {
+    @apply w-[145px] h-[148px];
+  }
+
+  div[data-mode="simple"] > ul {
+    @apply gap-x-6 gap-y-20;
+  }
+
+  div[data-mode="advanced"] > ul {
+    @apply gap-x-[38px] gap-y-[52px];
+  }
+
+  div[data-mode] > ul {
+    @apply grid grid-cols-2 grid-rows-1;
+  }
+
+  div[data-mode="advanced"] ul > li:nth-child(1) {
+    @apply col-span-2;
+    @apply place-self-center;
+    @apply mb-[-55px];
+    @apply grid-cols-2;
+  }
+  div[data-mode="advanced"] ul > li:nth-child(2) {
+    @apply place-self-start;
+  }
+
+  div[data-mode="advanced"] ul > li:nth-child(3),
+  div[data-mode="advanced"] ul > li:nth-child(4) {
+    @apply place-self-end;
+  }
+
+  div[data-mode="advanced"] ul > li:nth-child(5) {
+    @apply place-self-start;
+  }
+
+  div[data-mode="simple"] > ul > :nth-child(3) {
+    @apply col-span-2 place-self-center;
+  }
+
+  div[data-mode="simple"] > ul > :nth-child(4),
+  div[data-mode="simple"] > ul > :nth-child(5) {
+    @apply hidden;
+  }
+}
